@@ -6,10 +6,12 @@ Vértices(nodos)[entidades] e Arestas(não direcionadas) e arcos (direcionados) 
 
 Quando uma aresta conecta mais de dois vértices, a chamamos de hiperaresta.
 
-As relações (arestas) podem ter pesos, estes representando a força da relação.
+As relações (arestas) podem ter pesos, estes representando de maneira abstraída
+a força da relação.
 
-Esta relação de exemplo será amizade entre os indivíduos de uma rede social.
-Aqui não faz sentido ser amigo de si mesmo.
+A relação neste exemplo será amizade de entre os indivíduos em uma rede social.
+Entende-se então, que neste context não há cabimento a ideia de ser amigo de si
+mesmo.
 
 A representação formal pode ser vista como:
 
@@ -19,10 +21,19 @@ $V = \{ Ana, Bob, Carlos \}$ é o conjunto de vértices.
 
 $E = \{ \{Ana, Bob\}, \{Bob, Carlos\} \}$ é o conjunto de arestas.
 
-Nota: As arestas são compostas aqui de conjuntos e não de n-úplas pois aqui não temos direção.
+Nota: As arestas são compostas aqui de conjuntos e não de n-úplas pois aqui não
+temos direção. Portanto, entende-se que a ordem não importa.
 
 ### Nomenclatura
 Nomenclatura: $Ordenado = Dirigido$.
+
+## Representação Gráfica
+
+```mermaid
+graph TD;
+    Ana---Bob;
+    Bob---Carlos;
+```
 
 ## Matriz de adjacências
 
@@ -33,18 +44,21 @@ Nomenclatura: $Ordenado = Dirigido$.
 | Carlos | 0 | 1 | 0 |
 
 Aqui 0 indica a falta de relação e 1 a existência dela. Perceba que já que
-nesta modelagem não faz sentido o grafo ter qualquer relação na identidade e a
-matriz é simétrica. Sendo assim, ela pode ser representada, ocupando somente 
+nesta modelagem não faz sentido o grafo ter qualquer relação na diagonal
+principal e a matriz é simétrica. Sendo assim, ela pode ser representada,
+ocupando somente 
 $( n^2 - n ) / 2$
 células.
 Sendo: 
 
-$N^2$ : Tamanho total da matriz,
+$N^2$ : Tamanho total da matriz quadrada (trivialmente observável).
 
-$N$ : Identidade não importa para modelage.
+$N$ : Diagonal principal não importa para esta modelagem.
 
-$/2$ : Aqui a relação não tem direção, grafo não direcionado, sendo assim a
-matriz simétrica e não imporando o resultado a matriz triangular superior ou inferior.
+$/2$ : Aqui o grafo não tem direção (grafo não direcionado), sendo assim a
+matriz simétrica, incorrendo em que somente metade dos valores sejam de fato
+necessários para que a matriz possa ser definida corretamente dada esta
+relação.
 
 ## Peso
 
@@ -65,8 +79,8 @@ $w( \{ Bob, Carlos \} ) = 1$
 | Carlos | inf | 1 | inf |
 
 Em problemas de custo mínimo, faz mais sentido trocar-se 0 por infinito ou
-nulo. Claramente que não há sentido em questões de custo, que representação de
-nulidade inerente à relação seja representada por 0.
+nulo. Claramente, que não há sentido em questões de custo que a representação de
+nulidade inerente à relação seja dada por 0.
 
 $G'''$ = Grafo orientado
 
@@ -88,6 +102,15 @@ Matriz:
 Esta representação sendo a relação com o grafo definida por:
 
 $Matriz_{origem|desino} = A_{i|j}$
+
+### Representação Gráfica
+```mermaid
+graph TD;
+    1-->4;
+    1-->2;
+    2-->3;
+    3-->1;
+```
 
 ## Cardinalidade
 $n = | V' | \to cardinalidade$ é um conjunto de vértices
@@ -118,7 +141,13 @@ $d^+(n) = Saintes$
 $d^-(n) = Entrantes$
 
 ### Vizinhança
-Vértices que detêm alguma conexão.
+Vértices que detêm alguma conexão a um outro vértica.
+
+#### Definição
+É um subgrafo induzido de G constituído por todos os vértices adjacentes a v e
+todas as arestas ligando esses dois vértices
+
+#### Exemplo
 
 $N(n)$
 
