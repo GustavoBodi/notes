@@ -123,7 +123,7 @@ $m = | A  |$
 * Caminho
 * Multigrafo
 
-### Grau
+## Grau
 É definido por  $d(n)$
 n sendo o vértice.
 
@@ -140,14 +140,14 @@ $d^+(n) = Saintes$
 
 $d^-(n) = Entrantes$
 
-### Vizinhança
+## Vizinhança
 Vértices que detêm alguma conexão a um outro vértica.
 
-#### Definição
+### Definição
 É um subgrafo induzido de G constituído por todos os vértices adjacentes a v e
 todas as arestas ligando esses dois vértices
 
-#### Exemplo
+### Exemplo
 
 $N(n)$
 
@@ -157,11 +157,11 @@ $N^+(1) = { 4, 2 }$
 
 $N^-(1) = { 3 }$
 
-### Caminho
+## Caminho
 Sucessão de arestas e vértices para se chegar em um vértice.
 * Um caminho de 1 para 3 é $< 1, 2, 3 >$.
 * Um ciclo é um caminho que começa em um vértice e termina em um vértice.
 * Um ciclo de 1 para 3 é $< 1, 2, 3, 1 >$.
 
-### Multigrafo
+## Multigrafo
 Mais de uma aresta entre dois vértices.
