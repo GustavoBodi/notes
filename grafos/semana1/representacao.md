@@ -164,4 +164,4 @@ Sucessão de arestas e vértices para se chegar em um vértice.
 * Um ciclo de 1 para 3 é $< 1, 2, 3, 1 >$.
 
 ## Multigrafo
-Mais de uma aresta entre dois vértices.
+O grafo permite mais de uma aresta entre dois vértices.
