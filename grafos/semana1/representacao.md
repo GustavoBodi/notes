@@ -18,6 +18,9 @@ E = { {Ana, Bob}, {Bob Carlos} } é o conjunto de arestas.
 
 Nota: As arestas são compostas aqui de conjuntos e não de n-úplas pois aqui não temos direção.
 
+### Nomenclatura
+Nomenclatura: Ordenado === Dirigido.
+
 ## Matriz de adjacências
 
 | - | Ana | Bob | Carlos |
@@ -29,21 +32,18 @@ Nota: As arestas são compostas aqui de conjuntos e não de n-úplas pois aqui n
 Aqui 0 indica a falta de relação e 1 a existência dela. Perceba que já que
 nesta modelagem não faz sentido o grafo ter qualquer relação na identidade e a
 matriz é simétrica. Sendo assim, ela pode ser representada, ocupando somente 
-$$ ( n^2 - n ) / 2 $$ 
+$ ( n^2 - n ) / 2 $
 células.
 Sendo: 
-N^2 : Tamanho total da matriz,
+$ N^2 $ : Tamanho total da matriz,
 N : Identidade não importa para modelage.
 /2 : Aqui a relação não tem direção, grafo não direcionado.
-
-### Nomenclatura
-Nomenclatura: Ordenado === Dirigido.
 
 ## Peso
 
 Grafos com peso podem ser representados por:
 G' = (V, E, w)
-Sendo w uma função $$ E -> Z $$, na qual:
+Sendo w uma função $ E -> Z $, na qual:
 w( { Ana, Bob } ) = 10,
 w( { Bob, Carlos } ) = 1
 
@@ -71,11 +71,11 @@ Matriz:
 | 3 | 1 | 0 | 0 | 0 |
 | 4 | 0 | 0 | 0 | 0 |
 
-Matriz_origem|desino = A_i|j
+$ Matriz_origem|desino = A_i|j $
 
 ## Cardinalidade
-n = | V' | -> cardinalidade é um conjunto de vértices
-m = | A  |
+$ n = | V' | \Rightarrow cardinalidade é um conjunto de vértices $
+$ m = | A  | $
 
 ## Propriedades
 * Grau
@@ -84,24 +84,24 @@ m = | A  |
 * Multigrafo
 
 ### Grau
-É definido por  $$ d(n) $$
+É definido por  $ d(n) $
 n sendo o vértice.
 
 Exemplo:
-$$ d(1) = 1 $$
-    $$ d(Ana) = 1 $$
-$$ d(2) = 2 $$
-    $$ d(Bob) = 2 $$
+$ d(1) = 1 $
+    $ d(Ana) = 1 $
+$ d(2) = 2 $$
+    $ d(Bob) = 2 $
 
 Para grafos orientados, teremos que:
-$$ d^+(n) $$ = Saintes
-$$ d^-(n) $$ = Entrantes
+$ d^+(n) = Saintes $
+$ d^-(n) = Entrantes $
 
 ### Vizinhança
-N(n)
-N(Ana) = { Bob }
-$$ N^+(1) = { 4, 2 } $$
-$$ N^-(1) = { 3 } $$
+$ N(n) $
+$ N(Ana) = { Bob } $
+$ N^+(1) = { 4, 2 } $
+$ N^-(1) = { 3 } $
 
 ### Caminho
 Sucessão de arestas e vértices para se chegar em um vértice.
