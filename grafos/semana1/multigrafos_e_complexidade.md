@@ -70,3 +70,5 @@ Temos duas escalas de complexidade:
 
 * Polinomiais.
 * Exponenciais.
+
+## Estudar teorema mestre e da árvore para cálculo de complexidade
