@@ -59,6 +59,8 @@ No quesito do estudo das complexidades temos algumas perspectivas importantes, s
 * $\Omega{(n)} \rightarrow$ Melhor caso, limitante inferior.
 * $\Omicron{(n)} \rightarrow$ Pior caso, limitante superior.
 
+O comportamento médio está entre ou é igual ao melhor e ao pior caso.
+
 Quando $\Omega$ e $\Omicron$ são iguais, teremos um comportamento
 asintótico padrão, portanto o descreveremos como:
 
