@@ -153,3 +153,49 @@ $q_0 = q_0$
 
 $F = q_0$
 
+### Exemplo 2
+
+$L_1 = \lbrace w | w \in \Sigma^*$ e $|w|$ é par $\rbrace$
+
+$L_1 = \lbrace \epsilon, aa, ab, ba ,bb, aaaa, \dots \rbrace$
+
+Reconhecer palavra vazia: Reconhecer estado inicialmente como estado de aceitação.
+
+| $\delta$ | a | b |
+| - | - | - |
+| $\rightarrow q_0^*$ | $q_1$ | $q_1$ |
+| $q_1$, número ímpar | $q_0$ | $q_0$ |
+
+Descrição da máquina:
+
+$K = \lbrace q_0, q_1 \rbrace$
+
+$\Sigma = \lbrace a, b \rbrace$
+
+$\delta = \lbrace (q_0, a) \rightarrow q_1, (q_0, b) \rightarrow q_1, (q_1, a) \rightarrow q_0, (q_1, b) \rightarrow q_0 \rbrace$
+
+$q_0 = q_0$
+
+$F = \lbrace q_0 \rbrace$
+
+### Exemplo 3
+
+$L_2 = \lbrace w | w \in \Sigma^*$ e $|w|$ é ímpar $\rbrace$
+
+$L_2 = \lbrace a, b, aaa, \dots \rbrace$
+
+| $\delta$ | a | b |
+| - | - | - |
+| $\rightarrow q_0$ | $q_1$ | $q_1$ |
+| $q_1^*$ | $q_0$ | $q_0$ |
+
+### Exemplo 4
+
+$L_4 = \lbrace w | w \in \Sigma^*$ e $|w|$ mod $4 = 0 \rbrace$
+
+| $\delta$ | 1 | 2 | 3 |
+| - | - | - | - |
+| $\rightarrow M_0^*$ | $M_1$ | $M_2$ | $M_3$ |
+| $M_1$ | $M_2$ | $M_3$ | $M_0$ |
+| $M_2$ | $M_3$ | $M_0$ | $M_1$ |
+| $M_3$ | $M_0$ | $M_1$ | $M_2$ |
